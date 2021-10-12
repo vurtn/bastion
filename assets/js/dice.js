@@ -37,5 +37,5 @@ const roll_fate = () => {
       return '<i class="fa fa-plus-square-o fate-dice" aria-hidden="true"></i>'
     }
     return '<i class="fa fa-square-o fate-dice" aria-hidden="true"></i>'
-  }))
+  })).reduce((acc, el) => acc + el)
 }
