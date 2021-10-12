@@ -12,7 +12,7 @@
   </div>
   <div id="navMenuExample4" class="navbar-menu">
     <div class="navbar-start">
-      <a class="navbar-item " href="#">
+      <a class="navbar-item"  href="{{ 'index.html' | relative_url }}">
         Accueil
       </a>
       <div class="navbar-item has-dropdown is-hoverable">
@@ -20,29 +20,32 @@
           Outils
         </a>
         <div class="navbar-dropdown ">
-          <a class="navbar-item " href="{{ 'dice.html' | relative_url }}">
+          <a class="navbar-item" href="{{ 'dice.html' | relative_url }}">
             Dés
           </a>
-          <a class="navbar-item " href="#">
+          <a class="navbar-item" href="{{ 'tables.html' | relative_url }}">
             Tables
           </a>
         </div>
       </div>
-      <a class="navbar-item " href="#">
+      <a class="navbar-item" href="{{ 'profils.html' | relative_url }}">
         Profils
       </a>
-      <a class="navbar-item " href="#">
+      <a class="navbar-item"  href="{{ 'aspects.html' | relative_url }}">
         Aspects
       </a>
-      <a class="navbar-item " href="#">
+      <a class="navbar-item" href="{{ 'prouesses.html' | relative_url }}">
         Prouesses
+      </a>
+      <a class="navbar-item" href="{{ 'factions.html' | relative_url }}">
+        Factions
       </a>
     </div>
     <div class="navbar-end">
       <div class="navbar-item">
         <div class="field is-grouped">
           <p class="control">
-            <a class="button">
+            <a class="button" href="https://github.com/vurtn/twisted-fate">
               <span class="icon">
                 <i class="fa fa-github"> </i>
               </span>

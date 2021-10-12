@@ -6,8 +6,16 @@ document.addEventListener("DOMContentLoaded", function() {
 
 const roll = (faces = 6) => {
   if(faces === "fate"){
-
+    roll_fate()
   }else if(Number.isInteger(faces)){
-
+    roll_classic(faces)
   }
+}
+
+const roll_classic = (faces) => {
+
+}
+
+const roll_fate = () => {
+  
 }
