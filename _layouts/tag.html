@@ -1,0 +1,58 @@
+---
+layout: default
+---
+
+<div class="container">
+    <div class="row">
+        <center>
+            <h3>Actualités</h3>
+        </center>
+
+
+        {% for post in paginator.posts %}
+
+        {{ post.title }}
+
+        {% endfor %}
+
+
+        <!-- Pagination links -->
+        {% if paginator.total_pages > 1 %}
+        {% assign tag = page.tag %}
+
+        <center>
+            {% if paginator.previous_page %}
+            <a
+                href="{{ site.baseurl }}/tags/{{ tag }}{{ paginator.previous_page_path | replace: site.baseurl, '' | replace: '//', '/'  }}">&laquo;
+                Précédente</a>
+            {% else %}
+            <span>&laquo; Précédente</span>
+            {% endif %}
+
+            {% for page in (1..paginator.total_pages) %}
+            {% if page == paginator.page %}
+            <em>{{ page }}</em>
+            {% elsif page == 1 %}
+            <a href="{{ site.baseurl }}/tags/{{ tag }}">{{ page }}</a>
+            {% else %}
+            <a
+                href="{{ site.baseurl }}/tags/{{ tag }}{{ site.paginate_path | replace: site.baseurl, '' | replace: ':num', page }}">{{
+                page
+                }}</a>
+            {% endif %}
+            {% endfor %}
+
+            {% if paginator.next_page %}
+            <a
+                href="{{ site.baseurl }}/tags/{{ tag }}{{ paginator.next_page_path | replace: site.baseurl, '' | replace: '//', '/' }}">Suivante
+                &raquo;</a>
+            {% else %}
+            <span>Suivante &raquo;</span>
+            {% endif %}
+        </center>
+        {% endif %}
+
+
+
+    </div>
+</div>
