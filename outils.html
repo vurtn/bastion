@@ -2,65 +2,54 @@
 layout: default
 ---
 <div class="dice tag is-info is-large" data-faces="4">
-  d4
+	d4
 </div>
 <div class="dice tag is-info is-large" data-faces="6">
-  d6
+	d6
 </div>
 <div class="dice tag is-info is-large" data-faces="8">
-  d8
+	d8
 </div>
 <div class="dice tag is-info is-large" data-faces="10">
-  d10
+	d10
 </div>
 <div class="dice tag is-info is-large" data-faces="12">
-  d12
+	d12
 </div>
 <div class="dice tag is-info is-large" data-faces="20">
-  d20
+	d20
 </div>
 <div class="dice tag is-info is-large" data-faces="fate">
-  fate
+	fate
 </div>
 
 <div id="results">
-  <div id="fate-dice"></div>
-  <div id="value"></div>
+	<div id="fate-dice"></div>
+	<div id="value"></div>
 </div>
 
-<script src="{{ 'assets/js/dice.js' | relative_url }}"></script>
-
-
 <table class="table is-narrow">
-    <thead>
-        <tr>
-            <th>
-                Nom
-            </th>
-            <th>Action</th>
-            <th>Résultat</th>
-        </tr>
-    </thead>
-    <tfoot>
-        <tr>
-            <th>
-                Nom
-            </th>
-            <th>Action</th>
-            <th>Résultat</th>
-        </tr>
-    </tfoot>
-    <tbody>
-        <tr>
-            <td> Nom numero 1 </td>
-            <td><a class="button is-info is-outlined"> roll </a></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td> Nom numero 2 </td>
-            <td><a class="button is-info is-outlined"> roll </a></td>
-            <td></td>
-        </tr>
-    </tbody>
+	<thead>
+		<tr>
+			<th>
+				Table
+			</th>
+			<th>Action</th>
+			<th>Résultat</th>
+		</tr>
+	</thead>
+	<tbody>
+		{% for post in site.tags["tables"] %}
+		<tr>
+			<td><span class="table-name vcenter">{{ post.title }}</span>
+				<span class="table-content is-hidden">{{post.content}}</span>
+			</td>
+			<td><button class="button is-info is-outlined is-small" onclick="table_pick(this)">roll</button></td>
+			<td><span class="vcenter">{{ post.url }}</span></td>
+		</tr>
+		{% endfor %}
+	</tbody>
 </table>
 
+<script src="{{ 'assets/js/tables.js' | relative_url }}"></script>
+<script src="{{ 'assets/js/dice.js' | relative_url }}"></script>

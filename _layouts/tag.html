@@ -3,54 +3,48 @@ layout: default
 ---
 
 <div class="container">
-    <div class="row">
+	<div class="row">
 
-        {% for post in paginator.posts %}
+		{% for post in paginator.posts %}
+		{{ post.title }}
+		{% endfor %}
 
-        {{ post.title }}
+		<!-- Pagination links -->
+		{% if paginator.total_pages > 1 %}
+		{% assign tag = page.tag %}
 
-        {% endfor %}
+		<center>
+			<ul class="pagination-list">
+				{% if paginator.previous_page %}
+				<li><a href="{{ site.baseurl }}/tags/{{ tag }}{{ paginator.previous_page_path | replace: site.baseurl, '' | replace: '//', '/'  }}" class="pagination-previous">&laquo;
+						Précédent</a></li>
+				{% else %}
+				<li><span class="pagination-previous">&laquo; Précédent</span></li>
+				{% endif %}
 
-
-        <!-- Pagination links -->
-        {% if paginator.total_pages > 1 %}
-        {% assign tag = page.tag %}
-
-        <center>
-		<ul class="pagination-list">
-            {% if paginator.previous_page %}
-	    <li><a
-                href="{{ site.baseurl }}/tags/{{ tag }}{{ paginator.previous_page_path | replace: site.baseurl, '' | replace: '//', '/'  }}" class="pagination-previous">&laquo;
-		Précédent</a></li>
-            {% else %}
-	    <li><span class="pagination-previous">&laquo; Précédent</span></li>
-            {% endif %}
-
-            {% for page in (1..paginator.total_pages) %}
-            {% if page == paginator.page %}
-	    </li><em class="pagination-link is-current">{{ page }}</em></li>
-            {% elsif page == 1 %}
-	    <li><a href="{{ site.baseurl }}/tags/{{ tag }}" class="pagination-link">{{ page }}</a></li>
-            {% else %}
-	    <li><a
-                href="{{ site.baseurl }}/tags/{{ tag }}{{ site.paginate_path | replace: site.baseurl, '' | replace: ':num', page }}" class="pagination-link">{{
+				{% for page in (1..paginator.total_pages) %}
+				{% if page == paginator.page %}
+				</li><em class="pagination-link is-current">{{ page }}</em></li>
+				{% elsif page == 1 %}
+				<li><a href="{{ site.baseurl }}/tags/{{ tag }}" class="pagination-link">{{ page }}</a></li>
+				{% else %}
+				<li><a href="{{ site.baseurl }}/tags/{{ tag }}{{ site.paginate_path | replace: site.baseurl, '' | replace: ':num', page }}" class="pagination-link">{{
                 page
 		}}</a></li>
-            {% endif %}
-            {% endfor %}
+				{% endif %}
+				{% endfor %}
 
-            {% if paginator.next_page %}
-	    <li><a
-                href="{{ site.baseurl }}/tags/{{ tag }}{{ paginator.next_page_path | replace: site.baseurl, '' | replace: '//', '/' }}" class="pagination-next">Suivant
-		&raquo;</a></li>
-            {% else %}
-	    <li><span class="pagination-next">Suivant &raquo;</span></li>
-            {% endif %}
-        </center>
-	</ul>
-        {% endif %}
-
+				{% if paginator.next_page %}
+				<li><a href="{{ site.baseurl }}/tags/{{ tag }}{{ paginator.next_page_path | replace: site.baseurl, '' | replace: '//', '/' }}" class="pagination-next">Suivant
+						&raquo;</a></li>
+				{% else %}
+				<li><span class="pagination-next">Suivant &raquo;</span></li>
+				{% endif %}
+		</center>
+		</ul>
+		{% endif %}
 
 
-    </div>
+
+	</div>
 </div>

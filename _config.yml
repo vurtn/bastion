@@ -39,7 +39,7 @@ sass:
   sass_dir: _sass
   style: compressed
 
-paginate: 1
+paginate: 6
 paginate_path: "/twisted-fate/page:num/"
 
 defaults:
