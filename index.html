@@ -10,27 +10,28 @@ layout: default
 {% endfor %}
 
 {% if paginator.total_pages > 1 %}
-<div class="pagination">
+<ul class="pagination-list">
   {% if paginator.previous_page %}
-  <a href="{{ paginator.previous_page_path | relative_url }}">&laquo; Prev</a>
+  <li><a href="{{ paginator.previous_page_path | relative_url }}" class="pagination-previous">&laquo; Précédent</a></li>
   {% else %}
-  <span>&laquo; Prev</span>
+  <li><span class="pagination-previous">&laquo; Précédent</span></li>
   {% endif %}
 
   {% for page in (1..paginator.total_pages) %}
   {% if page == paginator.page %}
-  <em>{{ page }}</em>
+  <li><em class="pagination-link is-current">{{ page }}</em></li>
   {% elsif page == 1 %}
-  <a href="{{ '/' | relative_url }}">{{ page }}</a>
+  <li><a href="{{ '/' | relative_url }}" class="pagination-link">{{ page }}</a></li>
   {% else %}
-  <a href="{{ site.paginate_path | relative_url | replace: ':num', page }}">{{ page }}</a>
+  <li><a href="{{ site.paginate_path | relative_url | replace: ':num', page }}" class="pagination-link">{{ page }}</a></li>
   {% endif %}
   {% endfor %}
 
   {% if paginator.next_page %}
-  <a href="{{ paginator.next_page_path | relative_url }}">Next &raquo;</a>
+  <li><a href="{{ paginator.next_page_path | relative_url }}"i class="pagination-next">Suivant &raquo;</a></li>
   {% else %}
-  <span>Next &raquo;</span>
+  <li><span class="pagination-next">Suivant &raquo;</span></li>
   {% endif %}
 </div>
 {% endif %}
+

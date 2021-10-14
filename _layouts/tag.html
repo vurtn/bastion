@@ -17,35 +17,37 @@ layout: default
         {% assign tag = page.tag %}
 
         <center>
+		<ul class="pagination-list">
             {% if paginator.previous_page %}
-            <a
-                href="{{ site.baseurl }}/tags/{{ tag }}{{ paginator.previous_page_path | replace: site.baseurl, '' | replace: '//', '/'  }}">&laquo;
-                Précédente</a>
+	    <li><a
+                href="{{ site.baseurl }}/tags/{{ tag }}{{ paginator.previous_page_path | replace: site.baseurl, '' | replace: '//', '/'  }}" class="pagination-previous">&laquo;
+		Précédent</a></li>
             {% else %}
-            <span>&laquo; Précédente</span>
+	    <li><span class="pagination-previous">&laquo; Précédent</span></li>
             {% endif %}
 
             {% for page in (1..paginator.total_pages) %}
             {% if page == paginator.page %}
-            <em>{{ page }}</em>
+	    </li><em class="pagination-link is-current">{{ page }}</em></li>
             {% elsif page == 1 %}
-            <a href="{{ site.baseurl }}/tags/{{ tag }}">{{ page }}</a>
+	    <li><a href="{{ site.baseurl }}/tags/{{ tag }}" class="pagination-link">{{ page }}</a></li>
             {% else %}
-            <a
-                href="{{ site.baseurl }}/tags/{{ tag }}{{ site.paginate_path | replace: site.baseurl, '' | replace: ':num', page }}">{{
+	    <li><a
+                href="{{ site.baseurl }}/tags/{{ tag }}{{ site.paginate_path | replace: site.baseurl, '' | replace: ':num', page }}" class="pagination-link">{{
                 page
-                }}</a>
+		}}</a></li>
             {% endif %}
             {% endfor %}
 
             {% if paginator.next_page %}
-            <a
-                href="{{ site.baseurl }}/tags/{{ tag }}{{ paginator.next_page_path | replace: site.baseurl, '' | replace: '//', '/' }}">Suivante
-                &raquo;</a>
+	    <li><a
+                href="{{ site.baseurl }}/tags/{{ tag }}{{ paginator.next_page_path | replace: site.baseurl, '' | replace: '//', '/' }}" class="pagination-next">Suivant
+		&raquo;</a></li>
             {% else %}
-            <span>Suivante &raquo;</span>
+	    <li><span class="pagination-next">Suivant &raquo;</span></li>
             {% endif %}
         </center>
+	</ul>
         {% endif %}
 
 

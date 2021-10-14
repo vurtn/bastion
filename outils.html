@@ -1,6 +1,35 @@
 ---
 layout: default
 ---
+<div class="dice tag is-info is-large" data-faces="4">
+  d4
+</div>
+<div class="dice tag is-info is-large" data-faces="6">
+  d6
+</div>
+<div class="dice tag is-info is-large" data-faces="8">
+  d8
+</div>
+<div class="dice tag is-info is-large" data-faces="10">
+  d10
+</div>
+<div class="dice tag is-info is-large" data-faces="12">
+  d12
+</div>
+<div class="dice tag is-info is-large" data-faces="20">
+  d20
+</div>
+<div class="dice tag is-info is-large" data-faces="fate">
+  fate
+</div>
+
+<div id="results">
+  <div id="fate-dice"></div>
+  <div id="value"></div>
+</div>
+
+<script src="{{ 'assets/js/dice.js' | relative_url }}"></script>
+
 
 <table class="table is-narrow">
     <thead>
@@ -34,3 +63,4 @@ layout: default
         </tr>
     </tbody>
 </table>
+
