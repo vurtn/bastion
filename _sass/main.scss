@@ -1,4 +1,10 @@
 @import "bulma_superhero.min";
+@import "presentation";
+
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&display=swap");
+
+$main-red: #df0505;
+$background-dark: #222;
 
 .fate-dice {
 	font-size: 4rem;
@@ -11,4 +17,47 @@
 
 table {
 	@extend .table;
+}
+
+html {
+	background-color: darken($background-dark, 10%);
+	font-size: 1rem;
+}
+
+a {
+	color: $main-red;
+	text-decoration: underline;
+}
+
+#main {
+	width: 40%;
+	margin: 0 auto;
+	font-family: 'Inconsolata', monospace !important;
+}
+
+.post-list .post-item {
+	margin-bottom: 0px;
+}
+
+.post-list .post-item-date {
+	color: #404040;
+	display: flex;
+	align-items: center;
+}
+
+.post-list .post-item-icone {
+	padding-right: 10px;
+	display: flex;
+	justify-content: right;
+}
+
+.post-list .post-item-icone-img {
+	height: 30px;
+}
+
+.post-list .post-item-title {
+	padding-left: 0px;
+	display: flex;
+	align-items: center;
+	font-weight: bold;
 }
