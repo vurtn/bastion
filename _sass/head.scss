@@ -1,0 +1,12 @@
+@import "colors";
+
+#head {
+	margin-top: 30px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	.head-img {
+		height: 150px;
+	}
+}

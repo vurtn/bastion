@@ -1,0 +1,30 @@
+@import "colors";
+
+.post-list {
+	.post-item {
+		margin-bottom: 0px;
+	}
+
+	.post-item-date {
+		color: $item-date;
+		display: flex;
+		align-items: center;
+	}
+
+	.post-item-icone {
+		padding-right: 10px;
+		display: flex;
+		justify-content: right;
+	}
+
+	.post-item-icone-img {
+		height: 30px;
+	}
+
+	.post-item-title {
+		padding-left: 0px;
+		display: flex;
+		align-items: center;
+		font-weight: bold;
+	}
+}

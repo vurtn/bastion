@@ -15,5 +15,10 @@
 		color: $main-red;
 		border-color: $main-red;
 		text-decoration: none;
+
+		&:hover {
+			background-color: $main-red;
+			color: white;
+		}
 	}
 }
