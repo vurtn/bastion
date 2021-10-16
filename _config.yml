@@ -16,9 +16,6 @@ sass:
   sass_dir: _sass
   style: compressed
 
-load_paths:
-    - _sass
-
 paginate: 6
 paginate_path: "/bastion/page:num/"
 
