@@ -2,6 +2,8 @@
 
 #tables {
 	table {
+		width: 100%;
+
 		tr, td {
 			background-color: darken($background-dark, 10%);
 		}
@@ -10,10 +12,22 @@
 			color: $main-red;
 			border-color: $main-red;
 
-			&:hover {
+			&:hover, &:focus {
 				background-color: $main-red;
 				color: white;
 			}
+		}
+
+		.table-cell-title {
+			width: 45%;
+		}
+
+		.table-cell-pick {
+			width: 10%;
+		}
+
+		.table-cell-result {
+			width: 45%;
 		}
 	}
 }

@@ -1,12 +1,13 @@
 @import "bulma_superhero.min";
+
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&display=swap");
+
 @import "head";
 @import "presentation";
 @import "colors";
 @import "dice";
 @import "tables";
 @import "posts";
-
-@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&display=swap");
 
 .vcenter {
 	vertical-align: middle;
@@ -29,4 +30,5 @@ a {
 #main {
 	margin: 0 auto;
 	font-family: "Inconsolata", monospace !important;
+	font-size: 0.75rem;
 }
