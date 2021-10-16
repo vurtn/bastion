@@ -1,10 +1,12 @@
 @import "bulma_superhero.min";
+@import "head";
 @import "presentation";
+@import "colors";
+@import "dice";
+@import "tables";
+@import "posts";
 
 @import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&display=swap");
-
-$main-red: #df0505;
-$background-dark: #222;
 
 .fate-dice {
 	font-size: 4rem;
@@ -32,7 +34,7 @@ a {
 #main {
 	width: 40%;
 	margin: 0 auto;
-	font-family: 'Inconsolata', monospace !important;
+	font-family: "Inconsolata", monospace !important;
 }
 
 .post-list .post-item {

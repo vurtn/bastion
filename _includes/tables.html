@@ -1,0 +1,25 @@
+<div id="tables">
+	<table class="table is-narrow">
+		<thead>
+			<tr>
+				<th>
+					Table
+				</th>
+				<th>Action</th>
+				<th>Résultat</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for post in site.tags["tables"] %}
+			<tr>
+				<td><span class="table-name vcenter">{{ post.title }}</span>
+					<span class="table-content is-hidden">{{post.content}}</span>
+				</td>
+				<td><button class="button is-danger is-outlined is-small" onclick="table_pick(this)">
+						Lancer les dés</button></td>
+				<td><span class="vcenter">{{ post.url }}</span></td>
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+</div>

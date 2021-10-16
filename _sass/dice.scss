@@ -1,0 +1,21 @@
+@import "colors";
+
+#dice {
+	margin-top: 20px;
+
+	#value {
+		text-align: center;
+		color: $main-red;
+		font-weight: bold;
+		font-size: 3rem;
+	}
+}
+
+.dice {
+	display: flex;
+	justify-content: center;
+
+	img {
+		height: 80px;
+	}
+}

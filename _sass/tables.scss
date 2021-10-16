@@ -1,0 +1,18 @@
+@import "colors";
+
+#tables {
+	table {
+		tr, td {
+			background-color: darken($background-dark, 10%);
+		}
+
+		button {
+			color: $main-red;
+			border-color: $main-red;
+
+			&:hover {
+				background-color: $main-red;
+			}
+		}
+	}
+}

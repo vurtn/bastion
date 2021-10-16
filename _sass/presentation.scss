@@ -1,3 +1,5 @@
+@import "colors";
+
 #presentation {
 	margin-top: 40px;
 	margin-bottom: 40px;
@@ -10,8 +12,8 @@
 
 	a {
 		margin: 0 10px;
-		color: #df0505;
-		border-color: #df0505;
+		color: $main-red;
+		border-color: $main-red;
 		text-decoration: none;
 	}
 }
