@@ -13,10 +13,6 @@
 	vertical-align: middle;
 }
 
-table {
-	@extend .table;
-}
-
 html {
 	background-color: darken($background-dark, 10%);
 	font-size: 1rem;
@@ -32,4 +28,38 @@ a {
 	font-family: "Inconsolata", monospace !important;
 	font-size: 0.90rem;
 	padding: 20px;
+}
+
+table {
+	@extend .table;
+
+	@extend .is-narrow;
+
+	width: 100%;
+
+	tr, td {
+		background-color: darken($background-dark, 10%);
+	}
+
+	button {
+		color: $main-red;
+		border-color: $main-red;
+
+		&:hover, &:focus {
+			background-color: $main-red;
+			color: white;
+		}
+	}
+
+	.table-cell-title {
+		width: 45%;
+	}
+
+	.table-cell-pick {
+		width: 10%;
+	}
+
+	.table-cell-result {
+		width: 45%;
+	}
 }

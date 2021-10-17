@@ -16,7 +16,7 @@
 		border-color: $main-red;
 		text-decoration: none;
 
-		&:hover {
+		&:hover, &:focus {
 			background-color: $main-red;
 			color: white;
 		}

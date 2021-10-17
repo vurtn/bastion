@@ -5,7 +5,8 @@ date: 2021-10-14
 tag: tables
 ---
 
-# Oui/Non
+{: .post-title}
+Table : {{ page.title }}
 
 | Résultat | Valeur      |
 | -------- | ----------- |
