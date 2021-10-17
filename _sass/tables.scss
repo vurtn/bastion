@@ -1,1 +1,13 @@
 @import "colors";
+
+#tables {
+	button {
+		color: $main-red;
+		border-color: $main-red;
+
+		&:hover, &:focus {
+			background-color: $main-red;
+			color: white;
+		}
+	}
+}
