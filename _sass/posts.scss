@@ -1,20 +1,18 @@
 @import "colors";
 
 .post-list {
+	li, li div {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
 	.post-item {
 		margin-bottom: 0px;
 	}
 
 	.post-item-date {
 		color: $item-date;
-		display: flex;
-		align-items: center;
-	}
-
-	.post-item-icone {
-		padding-right: 10px;
-		display: flex;
-		justify-content: right;
 	}
 
 	.post-item-icone-img {
@@ -22,7 +20,7 @@
 	}
 
 	.post-item-title {
-		padding-left: 0px;
+		margin-left: 10px;
 		display: flex;
 		align-items: center;
 		font-weight: bold;

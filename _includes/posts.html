@@ -1,41 +1,35 @@
-{% for post in paginator.posts %}
-<div class="post-list">
-	<div class="columns post-item">
-		<div class="column is-1 post-item-icone">
-			<img src="/bastion/assets/img/icones/{{ post.tags }}.png" class="post-item-icone-img" alt="{{post.tag}} icon">
-		</div>
-		<div class="column is-8 post-item-title">
-			<p><a href="{{ post.url | relative_url }}">{{ post.title }}</a></p>
-		</div>
-		<div class="column is-3 post-item-date">
-			<p>{{ post.date | date_to_string }}</p>
-		</div>
-	</div>
-</div>
-{% endfor %}
+<ul class="post-list">
+	{% for post in paginator.posts %}
 
-{% if paginator.total_pages > 1 %}
-<ul class="pagination-list">
-	{% if paginator.previous_page %}
-	<li><a href="{{ paginator.previous_page_path | relative_url }}" class="pagination-previous">&laquo; Précédent</a></li>
-	{% else %}
-	<li><span class="pagination-previous">&laquo; Précédent</span></li>
-	{% endif %}
-
-	{% for page in (1..paginator.total_pages) %}
-	{% if page == paginator.page %}
-	<li><em class="pagination-link is-current">{{ page }}</em></li>
-	{% elsif page == 1 %}
-	<li><a href="{{ '/' | relative_url }}" class="pagination-link">{{ page }}</a></li>
-	{% else %}
-	<li><a href="{{ site.paginate_path | relative_url | replace: ':num', page }}" class="pagination-link">{{ page }}</a></li>
-	{% endif %}
+	<li>
+		<div><img src="/bastion/assets/img/icones/{{ post.tags }}.png" class="post-item-icone-img" alt="{{post.tag}} icon">
+			<a href="{{ post.url | relative_url }}" class="post-item-title">{{ post.title }}</a>
+		</div>
+		<span class="post-item-date">{{ post.date | date_to_string }}</span>
+	</li>
 	{% endfor %}
+	{% if paginator.total_pages > 1 %}
+	<ul class="pagination-list">
+		{% if paginator.previous_page %}
+		<li><a href="{{ paginator.previous_page_path | relative_url }}" class="pagination-previous">&laquo; Précédent</a></li>
+		{% else %}
+		<li><span class="pagination-previous">&laquo; Précédent</span></li>
+		{% endif %}
 
-	{% if paginator.next_page %}
-	<li><a href="{{ paginator.next_page_path | relative_url }}" i class="pagination-next">Suivant &raquo;</a></li>
-	{% else %}
-	<li><span class="pagination-next">Suivant &raquo;</span></li>
+		{% for page in (1..paginator.total_pages) %}
+		{% if page == paginator.page %}
+		<li><em class="pagination-link is-current">{{ page }}</em></li>
+		{% elsif page == 1 %}
+		<li><a href="{{ '/' | relative_url }}" class="pagination-link">{{ page }}</a></li>
+		{% else %}
+		<li><a href="{{ site.paginate_path | relative_url | replace: ':num', page }}" class="pagination-link">{{ page }}</a></li>
+		{% endif %}
+		{% endfor %}
+
+		{% if paginator.next_page %}
+		<li><a href="{{ paginator.next_page_path | relative_url }}" i class="pagination-next">Suivant &raquo;</a></li>
+		{% else %}
+		<li><span class="pagination-next">Suivant &raquo;</span></li>
+		{% endif %}
+	</ul>
 	{% endif %}
-</ul>
-{% endif %}
