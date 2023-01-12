@@ -17,7 +17,7 @@ sass:
   style: compressed
 
 paginate: 6
-paginate_path: "/bastion/page:num/"
+paginate_path: "/page:num/"
 
 defaults:
   - scope:
