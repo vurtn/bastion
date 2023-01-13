@@ -2,7 +2,7 @@
 layout: default
 title: "Fiches de personnage"
 date: 2023-01-13
-tag: arcana
+tag: ressources
 ---
 
 {{ page.title }}

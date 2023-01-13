@@ -37,7 +37,8 @@ table {
 
 	width: 100%;
 
-	tr, td {
+	tr,
+	td {
 		background-color: darken($background-dark, 10%);
 	}
 
@@ -45,7 +46,8 @@ table {
 		color: $main-red;
 		border-color: $main-red;
 
-		&:hover, &:focus {
+		&:hover,
+		&:focus {
 			background-color: $main-red;
 			color: white;
 		}
@@ -62,4 +64,26 @@ table {
 	.table-cell-result {
 		width: 45%;
 	}
+}
+
+.bastion-buttons {
+	margin-top: 10px;
+	display: flex;
+	justify-content: center;
+
+	a {
+		margin: 0 10px;
+		color: $main-red !important;
+		border-color: $main-red !important;
+		text-decoration: none;
+		text-transform: capitalize;
+
+		&:hover,
+		&:focus {
+			background-color: $main-red !important;
+			color: white;
+		}
+	}
+
+	margin-bottom: 3rem;
 }

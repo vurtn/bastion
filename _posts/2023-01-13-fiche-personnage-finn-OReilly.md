@@ -2,7 +2,7 @@
 layout: default
 title: "Fiche de personnage : Finn O’Reilly"
 date: 2021-10-14
-tag: fiche-personnage
+tag: fiches personnages
 ---
 
 {{ page.title }}

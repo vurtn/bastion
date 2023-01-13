@@ -3,5 +3,20 @@ layout: default
 ---
 
 {% include presentation.html %}
+<div class="bastion-buttons">
+    {% for tag in site.tags %}
+    <a class="button is-danger is-outlined is-small index-tags-space"
+        href="{{ tag[0] | replace: ' ', '_' | append: '.html' | relative_url }}"> {{ tag[0]
+        }}</a>
+    {% endfor %}
+    <a class="button is-danger is-outlined is-small index-tags-space"
+        href="{{ 'outils.html' | relative_url }}">Outils</a>
+    <a class="button is-danger is-outlined is-small" href="https://github.com/vurtn">
+        <span class="icon">
+            <i class="fa fa-github"> </i>
+        </span>
+        <span> GitHub </span>
+    </a>
+</div>
 
 {% include posts.html %}
