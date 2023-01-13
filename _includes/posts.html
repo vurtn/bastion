@@ -2,7 +2,7 @@
 	{% for post in paginator.posts %}
 
 	<li>
-		<div><img src="/bastion/assets/img/icones/{{ post.tags }}.png" class="post-item-icone-img" alt="{{post.tag}} icon">
+		<div><img src="/assets/img/icones/{{ post.tags }}.png" class="post-item-icone-img" alt="{{post.tag}} icon">
 			<a href="{{ post.url | relative_url }}" class="post-item-title">{{ post.title }}</a>
 		</div>
 		<span class="post-item-date">{{ post.date | date_to_string }}</span>
@@ -11,7 +11,8 @@
 	{% if paginator.total_pages > 1 %}
 	<ul class="pagination-list">
 		{% if paginator.previous_page %}
-		<li><a href="{{ paginator.previous_page_path | relative_url }}" class="pagination-previous">&laquo; Précédent</a></li>
+		<li><a href="{{ paginator.previous_page_path | relative_url }}" class="pagination-previous">&laquo;
+				Précédent</a></li>
 		{% else %}
 		<li><span class="pagination-previous">&laquo; Précédent</span></li>
 		{% endif %}
@@ -22,7 +23,8 @@
 		{% elsif page == 1 %}
 		<li><a href="{{ '/' | relative_url }}" class="pagination-link">{{ page }}</a></li>
 		{% else %}
-		<li><a href="{{ site.paginate_path | relative_url | replace: ':num', page }}" class="pagination-link">{{ page }}</a></li>
+		<li><a href="{{ site.paginate_path | relative_url | replace: ':num', page }}" class="pagination-link">{{ page
+				}}</a></li>
 		{% endif %}
 		{% endfor %}
 
