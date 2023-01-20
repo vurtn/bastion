@@ -1,0 +1,15 @@
+- nom: Peaky
+  probleme: Insociable.
+  concept: Vide-gousset de nids à punaises.
+  prouesses:
+    - nom: A pas de loup
+      description: Parce que je sais me rendre invisible, j'ai un bonus +2 si je surmonte un obstacle de facon sneaky quand je m'infiltre ou m'échappe d'une situation.
+
+    - nom: Sage comme une image
+      description: Parce que je sais projeter une image de moi-même, j'ai un bonus de +2 si je créé un avantage de facon sneaky lors d'un combat, d'une infiltration ou d'une diversion.
+  Sournois : 3
+  Astucieux : 2
+  Puissant : 1
+  Soigneux : 2
+  Rapide : 1
+  Flamboyant : 0
