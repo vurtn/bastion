@@ -87,3 +87,23 @@ table {
 
 	margin-bottom: 3rem;
 }
+
+
+.pagination-list {
+	margin: 0 auto;
+	margin-top: 2rem;
+}
+
+.pagination-link,
+.pagination-next,
+.pagination-previous {
+	color: red;
+	border-color: red;
+}
+
+em.pagination-link.is-current {
+	color: white;
+	background: red;
+	border-color: red;
+	font-weight: bold;
+}

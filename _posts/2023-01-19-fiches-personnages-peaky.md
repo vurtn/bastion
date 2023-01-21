@@ -1,23 +1,23 @@
 ---
 layout: default
 title: "Fiche de personnage : Peaky"
-date: 2021-10-14
+date: 2023-01-20
 tag: fiches personnages
-personnage: peaky
 ---
 
-{% assign personnage = site.data.fiches-personnages[page.personnage] %}
 {: .posts-title }
 {{ page.title }}
 
 {: .posts-concept }
 Concept
 
+Vide-gousset de nids à punaises.
 
 
 {: .posts-probleme }
 Problème
 
+Insociable
 
 
 {: .posts-prouesses }

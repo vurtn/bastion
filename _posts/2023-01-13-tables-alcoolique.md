@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Synonymes désignant une personne alcoolique"
+title: "Aspects désignant une personne alcoolique"
 date: 2023-01-13
 tag: tables
 ---

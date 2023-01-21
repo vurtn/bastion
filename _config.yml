@@ -16,7 +16,7 @@ sass:
   sass_dir: _sass
   style: compressed
 
-paginate: 6
+paginate: 15
 paginate_path: "/page:num/"
 
 defaults:
