@@ -5,7 +5,7 @@
 		<div><img src="/assets/img/icones/{{ post.tags }}.png" class="post-item-icone-img" alt="{{post.tag}} icon">
 			<a href="{{ post.url | relative_url }}" class="post-item-title">{{ post.title }}</a>
 		</div>
-		<span class="post-item-date">{{ post.date | date_to_string }}</span>
+		<span class="post-item-date">{{ post.date | date: "%d/%m/%Y" }}</span>
 	</li>
 	{% endfor %}
 	{% if paginator.total_pages > 1 %}

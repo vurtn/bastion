@@ -67,12 +67,13 @@ table {
 }
 
 .bastion-buttons {
-	margin-top: 10px;
 	display: flex;
 	justify-content: center;
+	flex-wrap: wrap;
 
 	a {
 		margin: 0 10px;
+		margin-top: 10px;
 		color: $main-red !important;
 		border-color: $main-red !important;
 		text-decoration: none;
